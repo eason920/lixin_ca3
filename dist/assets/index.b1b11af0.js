@@ -15901,49 +15901,49 @@ const k5 = B(
   },
   P5 = [
     { path: "/", name: "Home", component: O5 },
-    {
-      path: "/formThanks",
-      name: "formThanks",
-      component: () =>
-        so(
-          () => import("./FormThanks.6d1b1733.js"),
-          [
-            "lixin_ca3/dist/assets/FormThanks.6d1b1733.js",
-            "lixin_ca3/dist/assets/FormThanks.47c2e792.css",
-          ]
-        ),
-    },
-    {
-      path: "/phoneThanks",
-      name: "phoneThanks",
-      component: () =>
-        so(
-          () => import("./PhoneThanks.e5ba58c2.js"),
-          [
-            "lixin_ca3/dist/assets/PhoneThanks.e5ba58c2.js",
-            "lixin_ca3/dist/assets/PhoneThanks.de821098.css",
-          ]
-        ),
-    },
-    {
-      name: "404",
-      path: "/404",
-      component: () =>
-        so(
-          () => import("./404.8683db0a.js"),
-          ["lixin_ca3/dist/assets/404.8683db0a.js", "lixin_ca3/dist/assets/404.480c6317.css"]
-        ),
-    },
-    {
-      name: "404",
-      path: "/404",
-      component: () =>
-        so(
-          () => import("./404.8683db0a.js"),
-          ["lixin_ca3/dist/assets/404.8683db0a.js", "lixin_ca3/dist/assets/404.480c6317.css"]
-        ),
-    },
-    { path: "/:catchAll(.*)", redirect: "/404" },
+    // {
+    //   path: "/formThanks",
+    //   name: "formThanks",
+    //   component: () =>
+    //     so(
+    //       () => import("./FormThanks.6d1b1733.js"),
+    //       [
+    //         "lixin_ca3/dist/assets/FormThanks.6d1b1733.js",
+    //         "lixin_ca3/dist/assets/FormThanks.47c2e792.css",
+    //       ]
+    //     ),
+    // },
+    // {
+    //   path: "/phoneThanks",
+    //   name: "phoneThanks",
+    //   component: () =>
+    //     so(
+    //       () => import("./PhoneThanks.e5ba58c2.js"),
+    //       [
+    //         "lixin_ca3/dist/assets/PhoneThanks.e5ba58c2.js",
+    //         "lixin_ca3/dist/assets/PhoneThanks.de821098.css",
+    //       ]
+    //     ),
+    // },
+    // {
+    //   name: "404",
+    //   path: "/404",
+    //   component: () =>
+    //     so(
+    //       () => import("./404.8683db0a.js"),
+    //       ["lixin_ca3/dist/assets/404.8683db0a.js", "lixin_ca3/dist/assets/404.480c6317.css"]
+    //     ),
+    // },
+    // {
+    //   name: "404",
+    //   path: "/404",
+    //   component: () =>
+    //     so(
+    //       () => import("./404.8683db0a.js"),
+    //       ["lixin_ca3/dist/assets/404.8683db0a.js", "lixin_ca3/dist/assets/404.480c6317.css"]
+    //     ),
+    // },
+    // { path: "/:catchAll(.*)", redirect: "/404" },
   ],
   Ed = Qf({ history: wl(), routes: P5 });
 var Up = { exports: {} };
