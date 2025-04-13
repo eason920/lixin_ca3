@@ -1,0 +1,68 @@
+$bp_mb: 768px
+$bp_pc: $bp_mb + 1px
+$fs_pc: 0.9vw
+$fs_mb: 3vw
+
+$w_wrapper_pc: 80vw
+$g_wrapper_pc: 10vw
+$w_wrapper_mb: 80vw
+$g_wrapper_mb: 10vw
+
+$c_brown: #bf9748
+// #C9A063
+
+@function size($size)
+  $c-size: calc(100vw * $size / 1920)
+  @return #{$c-size}
+
+@function sizem($size)
+  $c-size: calc(100vw * $size / 375)
+  @return #{$c-size}
+
+
+@mixin fullScreen
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+@mixin liinCircle
+  position: relative
+  &:before, &:after
+    content: '',
+    position: absolute
+    background: #fff
+  &:before
+    width: 5px
+    height: 5px
+    border-radius: 50%
+
+@mixin flexCenter 
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+%fullScreen
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+%centerX
+  left: 50%
+  transform: translateX(-50%)
+
+%centerY
+  top: 50%
+  transform: translateY(-50%)
+  
+%textShadow
+  text-shadow: 0 0 0.55em rgba(0,0,0,.5), 0 0 0.2em rgba(0,0,0,.8)
+
+%textShadowDeep
+  text-shadow: 0 0 0.55em rgba(0,0,0,.5), 0 0 0.2em rgba(0,0,0,.8)

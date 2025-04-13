@@ -1,0 +1,44 @@
+{
+  "name": "vite-house",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "output": "vite build && node head.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@better-scroll/core": "^2.4.2",
+    "@gtm-support/vue-gtm": "^1.6.0",
+    "@splidejs/vue-splide": "^0.6.7",
+    "aos": "^2.3.4",
+    "countup.js": "^2.8.0",
+    "daisyui": "^2.15.3",
+    "fs": "0.0.1-security",
+    "html-minifier": "^4.0.0",
+    "jquery": "^3.6.0",
+    "jquery.transit": "^0.9.12",
+    "path": "^0.12.7",
+    "sass": "^1.52.3",
+    "swiper": "^8.3.0",
+    "vue": "^3.2.25",
+    "vue-lazyload": "3.0.0-rc.2",
+    "vue-mobile-detection": "^2.0.1",
+    "vue-recaptcha": "^2.0.2",
+    "vue-router": "^4.0.13",
+    "vue-toastification": "2.0.0-rc.5",
+    "vue3-smooth-scroll": "^0.8.1",
+    "vue3-touch-events": "^4.1.0",
+    "webpack": "^5.73.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.2",
+    "vite": "^2.9.9",
+    "vite-plugin-imagemin": "^0.6.1",
+    "webpack-cli": "^4.10.0"
+  }
+}
