@@ -15907,7 +15907,7 @@ const k5 = B(
       component: () =>
         so(
           () => import("./FormThanks.6d1b1733.js"),
-          ["assets/FormThanks.6d1b1733.js", "assets/FormThanks.47c2e792.css"]
+          ["lixin_ca3/assets/FormThanks.6d1b1733.js", "lixin_ca3/assets/FormThanks.47c2e792.css"]
         ),
     },
     {
@@ -15916,7 +15916,7 @@ const k5 = B(
       component: () =>
         so(
           () => import("./PhoneThanks.e5ba58c2.js"),
-          ["assets/PhoneThanks.e5ba58c2.js", "assets/PhoneThanks.de821098.css"]
+          ["lixin_ca3/assets/PhoneThanks.e5ba58c2.js", "lixin_ca3/assets/PhoneThanks.de821098.css"]
         ),
     },
     {
@@ -15925,7 +15925,7 @@ const k5 = B(
       component: () =>
         so(
           () => import("./404.8683db0a.js"),
-          ["assets/404.8683db0a.js", "assets/404.480c6317.css"]
+          ["lixin_ca3/assets/404.8683db0a.js", "lixin_ca3/assets/404.480c6317.css"]
         ),
     },
     {
@@ -15934,7 +15934,7 @@ const k5 = B(
       component: () =>
         so(
           () => import("./404.8683db0a.js"),
-          ["assets/404.8683db0a.js", "assets/404.480c6317.css"]
+          ["lixin_ca3/assets/404.8683db0a.js", "lixin_ca3/assets/404.480c6317.css"]
         ),
     },
     { path: "/:catchAll(.*)", redirect: "/404" },
