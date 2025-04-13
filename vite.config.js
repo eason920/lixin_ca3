@@ -11,6 +11,8 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: "/lixin_ca3/dist/",
+    // publicPath: process.env.NODE_ENV === 'production' ? '/lixin_bbb/dist/' : '/',
     commonjsOptions: {
       transformMixedEsModules: true,
     },
