@@ -36,6 +36,13 @@ import "swiper/css/navigation";
 import PicCaption from "./pub/PicCaption.vue";
 
 const aIimg = ref(
+    [
+        new URL("./s9/1.jpg", import.meta.url).href,
+        new URL("./s9/2.jpg", import.meta.url).href,
+      ]
+)
+/*
+const aIimg = ref(
   isMobile.value
     ? [
         new URL("../section/s9/1mb.png", import.meta.url).href,
@@ -45,12 +52,12 @@ const aIimg = ref(
         new URL("../section/s9/1.png", import.meta.url).href,
         new URL("../section/s9/2.png", import.meta.url).href,
       ]
-);
+);*/
 
 const caption = ref({
   txt: "外觀3D示意圖",
   color: "#fff",
-  right: "10px",
+  right: "calc(50% - 49.5vw + .5em)",
   bottom: "10px",
 });
 </script>
@@ -71,11 +78,20 @@ const caption = ref({
     @extend %centerX;
   }
 }
+.swiper {
+    width: 100%;
+    overflow: hidden;
+    height: size(1080);
+}
+  
 
 @media screen and (max-width: $bp_mb) {
   .box .title {
     top: sizem(20);
     width: sizem(300);
+  }
+  .swiper {width: 140%;left: -20%;position: relative;
+    height: sizem(348);
   }
 }
 </style>
@@ -83,20 +99,22 @@ const caption = ref({
 <style lang="scss">
 @import "@/assets/style/public.sass";
 .s9 {
-  .swiper {
-    width: 100%;
-    height: 55.6vw;
-    overflow: hidden;
-  }
 
   .swiper-slide {
     text-align: center;
     font-size: 18px;
+    height: 100%;
 
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
+    .box,
+    .view{height: 100%;}
+    .view{
+      img{height: 100%;object-fit: cover;}
+      span{left: 50%;}
+    }
   }
 
   .swiper-button-prev,
@@ -112,17 +130,14 @@ const caption = ref({
   }
 
   .swiper-button-prev {
+    left: calc(50% - 50vw);
     background-image: url(./s9/arrow_left.png);
   }
 
   .swiper-button-next {
+    right: calc(50% - 50vw);
     background-image: url(./s9/arrow_right.png);
   }
 
-  @media screen and (max-width: $bp) {
-    .swiper {
-      height: 93vw;
-    }
-  }
 }
 </style>

@@ -21,7 +21,7 @@
           </div>
           <img v-if="!isMobile" class="hr" src="./public//line.png" />
           <div class="pbox is_v3">
-            <img src="./s10/pics3.png" />
+            <img src="./s10/pics3.webp" />
             <!--  -->
             <span class="pc_u is_u1">台南晶英酒店</span>
             <span class="pc_u is_u2">台南晶英酒店大廳</span>
@@ -42,7 +42,7 @@
           </div>
           <img v-if="!isMobile" class="hr" src="./public//line.png" />
           <div class="pbox is_v2">
-            <img src="./s10/pics2.png" />
+            <img src="./s10/pics2.webp" />
             <span class="pc_a is_a1">公設實景拍攝圖</span>
             <span class="pc_a is_a2">公設實景拍攝圖</span>
             <span class="pc_a is_a3">公設實景拍攝圖</span>
@@ -66,7 +66,7 @@
           </div>
           <img v-if="!isMobile" class="hr" src="./public//line.png" />
           <div class="pbox is_v1">
-            <img src="./s10/pics1.png" />
+            <img src="./s10/pics1.webp" />
             <span class="pc_a is_a1">外觀3D示意圖</span>
             <span class="pc_a is_a2">外觀3D示意圖</span>
             <span class="pc_a is_a3">外觀3D示意圖</span>

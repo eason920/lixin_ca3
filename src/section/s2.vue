@@ -3,14 +3,18 @@
     <div class="tbox">
       <img data-aos="fade-up" src="./s2/en.png" class="en">
       <HR data-aos="fade-up" class="hr" :props-color="'255,255,255'" />
-      <img data-aos="fade-up" src="./s2/txt.png" class="txt">
+      <img data-aos="fade-up" src="./s2/txt.webp" class="txt">
     </div>
 
     <div class="pbox">
-      <img data-aos="fade-up" src="@/section/s2/1.png" />
-      <img data-aos="fade-up" data-aos-delay="300" src="@/section/s2/2.png" />
-      <img data-aos="fade-up" data-aos-delay="600" src="@/section/s2/3.png" />
-      <img data-aos="fade-up" data-aos-delay="900" src="@/section/s2/4.png" />
+      <div data-aos="fade-up" data-aos-delay="300">回信符碼<br>與市場對話</div>
+      <div data-aos="fade-up" data-aos-delay="600">創新/重新<br>永續經營意象</div>
+      <div data-aos="fade-up" data-aos-delay="900">｢家｣的意涵<br>具有國際感</div>
+      <div data-aos="fade-up" data-aos-delay="1200">合作夥伴<br>創造名義</div>
+      <!-- <img data-aos="fade-up" src="@/section/s2/1.webp" />
+      <img data-aos="fade-up" data-aos-delay="300" src="@/section/s2/2.webp" />
+      <img data-aos="fade-up" data-aos-delay="600" src="@/section/s2/3.webp" />
+      <img data-aos="fade-up" data-aos-delay="900" src="@/section/s2/4.webp" /> -->
     </div>
 
     <img data-aos="fade-up" data-aos-delay="1200" class="logo" src="./s2/logo.png" />
@@ -50,12 +54,25 @@ const isMobile = computed(() => globals.isMobile());
 
 .pbox {
   display: flex;
+  font-size: size(32);
+  justify-content:center;
+  gap: 2em;
+div{
+  width: 7.4em;
+  height: auto;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;justify-content:center;align-items:center;text-align: center;
+  background-image: linear-gradient(330deg, #FC4C02 , #ff9900);
+color: #FFF;aspect-ratio: 1/1; /* 可依需要調整 */
+}
+
 }
 @media screen and (min-width: $bp_pc) {
   .s2 {
     height: size(1069);
     background: {
-      image: url("@/section/s2/bg_pc.png");
+      image: url("@/section/s2/bg_pc.webp");
       size: contain;
     }
     padding-top: size(138);
@@ -68,8 +85,8 @@ const isMobile = computed(() => globals.isMobile());
     }
     margin-bottom: size(94)
   }
-
   $w: size(1155);
+/*
   .pbox {
     width: $w;
     img {
@@ -81,7 +98,7 @@ const isMobile = computed(() => globals.isMobile());
     }
     margin-bottom: size(40);
   }
-
+*/
   .logo {
     width: $w;
   }
@@ -90,7 +107,7 @@ const isMobile = computed(() => globals.isMobile());
   .s2 {
     height: sizem(667); //原圖 1334/2
     background: {
-      image: url("@/section/s2/bg_mb.png");
+      image: url("@/section/s2/bg_mb.webp");
       size: cover;
     }
     padding-top: sizem(95);
@@ -110,7 +127,10 @@ const isMobile = computed(() => globals.isMobile());
   .pbox {
     $v: 6vw;
     flex-wrap: wrap;
-    width: sizem(214);
+    width: sizem(350);
+    font-size: sizem(14);
+    margin-bottom: sizem(43);
+    /*
     img {
       width: calc(50% - $v);
       margin-bottom: $v;
@@ -121,7 +141,7 @@ const isMobile = computed(() => globals.isMobile());
         margin-bottom: 0;
       }
     }
-    margin-bottom: sizem(43);
+      */
   }
 
   .logo {

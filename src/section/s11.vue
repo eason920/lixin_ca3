@@ -3,17 +3,17 @@
     <img src="./s11/en.png" class="en">
     <img v-if="!isMobile" src="./s11/title_pc.png" class="title" data-aos="fade-up">
     <img v-else src="./s11/title_mb.png" class="title" data-aos="fade-up">
-    <div class="box">
-      <div class="content ani_left">
+    <div class="box"><input type="checkbox" name="pics1" id="pics1">
+      <label for="pics1" class="content ani_left" >
         <img src="./s11/1.png" />
         <img src="./s11/1.png" />
-      </div>
+      </label>
     </div>
-    <div class="box">
-      <div class="content ani_right">
+    <div class="box"><input type="checkbox" name="pics2" id="pics2">
+      <label for="pics2" class="content ani_right">
         <img src="./s11/2.png" />
         <img src="./s11/2.png" />
-      </div>
+      </label>
     </div>
   </article>
 </template>
@@ -32,7 +32,7 @@ const isMobile = computed(() => globals.$isMobile());
   z-index: 99;
   padding: 0 0 8vw;
   height: 55.7vw;
-  background-image: url(./s11/bg.png);
+  background-image: url(./s11/bg.webp);
   background-size: contain;
   background-position: center top;
 }
@@ -52,34 +52,32 @@ const isMobile = computed(() => globals.$isMobile());
   & + .box {
     margin-top: 3vw;
   }
+  input {
+    display: none;
+  }
+ /* input:checked + .content:hover {
+    animation-play-state: paused;
+  }*/
 }
-.content {
+.content {display: block;
   width: 200vw;
+  &:hover {
+    animation-play-state: paused;
+  }
   img {
     width: 100vw;
   }
 }
-@keyframes ani_l {
-  0% {
-    transform: translateX(0);
-  }
+@keyframes ani {
   100% {
     transform: translateX(-50%);
-  }
-}
-@keyframes ani_r {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 .ani_left {
-  animation: ani_l 10s linear infinite forwards;
+  animation: ani 20s linear infinite;
 }
 .ani_right {
-  animation: ani_r 10s linear infinite forwards;
+  animation: ani 20s linear infinite reverse;
 }
 @media screen and (max-width: $bp) {
   .s11 {
