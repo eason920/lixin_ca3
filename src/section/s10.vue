@@ -5,9 +5,10 @@
       :modules="[Navigation, Autoplay]"
       navigation
       loop
-      :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }"
       class="mySwiper"
     >
+    <!-- 
+    :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }" -->
     <swiper-slide>
         <div class="box">
           <div class="mbox">
@@ -21,7 +22,7 @@
           </div>
           <img v-if="!isMobile" class="hr" src="./public//line.png" />
           <div class="pbox is_v3">
-            <img src="./s10/pics3.png" />
+            <img src="./s10/pics3.webp" />
             <!--  -->
             <span class="pc_u is_u1">台南晶英酒店</span>
             <span class="pc_u is_u2">台南晶英酒店大廳</span>
@@ -42,7 +43,7 @@
           </div>
           <img v-if="!isMobile" class="hr" src="./public//line.png" />
           <div class="pbox is_v2">
-            <img src="./s10/pics2.png" />
+            <img src="./s10/pics2.webp" />
             <span class="pc_a is_a1">公設實景拍攝圖</span>
             <span class="pc_a is_a2">公設實景拍攝圖</span>
             <span class="pc_a is_a3">公設實景拍攝圖</span>
@@ -66,7 +67,7 @@
           </div>
           <img v-if="!isMobile" class="hr" src="./public//line.png" />
           <div class="pbox is_v1">
-            <img src="./s10/pics1.png" />
+            <img src="./s10/pics1.webp" />
             <span class="pc_a is_a1">外觀3D示意圖</span>
             <span class="pc_a is_a2">外觀3D示意圖</span>
             <span class="pc_a is_a3">外觀3D示意圖</span>
@@ -74,7 +75,7 @@
             <!--  -->
             <span class="pc_u is_u1">新北林口 － 小・學堂</span>
             <span class="pc_u is_u2">桃園觀音 － 鼎騰案</span>
-            <span class="pc_u is_u3">新北新莊 － 元邦鴻福案</span>
+            <span class="pc_u is_u3">新北新莊-元邦鴻福案</span>
             <span class="pc_u is_u4">祥泓板橋大同都更案</span>
           </div>
         </div>
@@ -152,74 +153,74 @@ import "swiper/css/navigation";
 
 .is_v1 {
   .pc_a {
-    top: 0.3vw;
+    top: .5em;
     &.is_a1 {
-      left: 0.3vw;
+      left: .5em;
     }
     &.is_a2 {
-      left: 12vw;
+      left: calc(22.7% + .5em);
     }
     &.is_a3 {
-      left: 23.5vw;
+      left: calc(45.5% + .5em);
     }
     &.is_a4 {
-      left: 34.5vw;
+      left: calc(68.1% + .5em);
     }
   }
 
   .pc_u {
-    bottom: 0.3vw;
+    bottom: .5em;
     &.is_u1 {
-      left: 0.3vw;
+      left: .5em;
     }
     &.is_u2 {
-      left: 12vw;
+      left: calc(22.7% + .5em);
     }
     &.is_u3 {
-      left: 23.5vw;
+      left: calc(45.5% + .5em);
     }
     &.is_u4 {
-      left: 34.5vw;
+      left: calc(68.1% + .5em);
     }
   }
 }
 
 .is_v2 {
   .pc_a {
-    bottom: 0.3vw;
+    bottom: .5em;
     &.is_a1 {
-      left: 12vw;
+      right: calc(67.3% + .5em);
     }
     &.is_a2 {
-      left: 28.9vw;
+      right: calc(33.7% + .5em);
     }
     &.is_a3 {
-      right: 0.5vw;
+      right: .5em;
     }
   }
 
   .pc_u {
-    bottom: 0.3vw;
+    bottom: .5em;
     &.is_u1 {
-      left: 0.5vw;
+      left: 0.5em;
     }
     &.is_u2 {
-      left: 17.5vw;
+      left: calc(33.8% + .5em);
     }
     &.is_u3 {
-      left: 34.2vw;
+      left: calc(67.3% + .5em);
     }
   }
 }
 
 .is_v3 {
   .pc_u {
-    bottom: 0.3vw;
+    bottom: .5em;
     &.is_u1 {
-      left: 20vw;
+      right: calc(48.8% + .5em);
     }
     &.is_u2 {
-      right: 1vw;
+      right: .5em;
     }
   }
 }
@@ -263,79 +264,13 @@ import "swiper/css/navigation";
     }
   }
 
-  .is_v1 {
-    .pc_a {
-      top: 1.5vw;
-      &.is_a1 {
-        left: 1.5vw;
-      }
-      &.is_a2 {
-        left: 24vw;
-      }
-      &.is_a3 {
-        left: 47vw;
-      }
-      &.is_a4 {
-        left: 69.5vw;
-      }
-    }
-
-    .pc_u {
-      bottom: 1.5vw;
-      &.is_u1 {
-        left: 1.5vw;
-      }
-      &.is_u2 {
-        left: 24vw;
-      }
-      &.is_u3 {
-        left: 47vw;
-      }
-      &.is_u4 {
-        left: 69.5vw;
-      }
-    }
-  }
 
   .is_v2 {
     .pc_a {
-      top: 1.5vw;
-      &.is_a1 {
-        left: 17vw;
-      }
-      &.is_a2 {
-        left: 51vw;
-      }
-      &.is_a3 {
-        right: 1.5vw;
-      }
-    }
-
-    .pc_u {
-      bottom: 1.5vw;
-      &.is_u1 {
-        left: 1.5vw;
-      }
-      &.is_u2 {
-        left: 36vw;
-      }
-      &.is_u3 {
-        left: 69vw;
-      }
+      top: 0.5em;
     }
   }
 
-  .is_v3 {
-    .pc_u {
-      bottom: 1.5vw;
-      &.is_u1 {
-        left: 37vw;
-      }
-      &.is_u2 {
-        right: 2vw;
-      }
-    }
-  }
 }
 </style>
 

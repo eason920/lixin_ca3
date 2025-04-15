@@ -21,7 +21,7 @@ import HR from "./public/hr.vue";
 @import "./pub/myvar.sass";
 .s12 {
   background: {
-    image: url("@/section/s12/pic.png");
+    image: url("@/section/s12/pic.webp");
     repeat: no-repeat;
     position: center;
   }
@@ -40,6 +40,7 @@ import HR from "./public/hr.vue";
   letter-spacing: 0.2vw;
   line-height: 1;
   margin-bottom: size(28);
+  text-shadow: 0 0 .2em #0009;
 }
 .hr {
   width: size(760);
@@ -48,6 +49,7 @@ import HR from "./public/hr.vue";
 }
 .txt {
   font-size: size(22);
+  text-shadow: 0 0 .2em #0009;
 }
 .tip {
   position: absolute;

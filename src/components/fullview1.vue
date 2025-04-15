@@ -1,6 +1,6 @@
 <template>
   <div class="viewbox" ref="viewbox">
-    <img ref="viewImg" src="@/section/map/map.png" />
+    <img ref="viewImg" src="@/section/map/map.jpg" />
   </div>
 </template>
 
@@ -16,8 +16,8 @@
   > img {
     height: 100%;
     max-width: unset;
-    background: url("@/section/map/map.png") 50%;
-    background-size: 100% auto;
+  //  background: url("@/section/map/map.jpg") 50%;
+  //  background-size: 100% auto;
   }
 }
 
