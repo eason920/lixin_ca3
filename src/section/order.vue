@@ -21,13 +21,13 @@
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row">
-            <span class="deco">
+            <span>
               姓名
-              <span v-if="!bypass.includes('name')"></span>
+              <span v-if="!bypass.includes('name')">*</span>
             </span>
             <input
               type="text"
-              placeholder=""
+              placeholder="請輸入姓名"
               class="input w-full rounded-none"
               :value="formData.name"
               @input="(event) => (formData.name = event.target.value)"
@@ -35,13 +35,13 @@
           </label>
 
           <label class="row">
-            <span class="deco">
-              手機
-              <span v-if="!bypass.includes('phone')"></span>
+            <span>
+              連絡電話
+              <span v-if="!bypass.includes('phone')">*</span>
             </span>
             <input
               type="text"
-              placeholder=""
+              placeholder="請輸入電話"
               class="input w-full rounded-none"
               :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)"
@@ -71,13 +71,13 @@
           </label> -->
 
           <label class="row">
-            <span class="deco">
-              信箱
+            <span>
+              電子信箱
               <span v-if="!bypass.includes('email')">*</span>
             </span>
             <input
               type="text"
-              placeholder=""
+              placeholder="請輸入電子信箱"
               class="input w-full rounded-none"
               :value="formData.email"
               @input="(event) => (formData.email = event.target.value)"
@@ -86,11 +86,12 @@
 
           <label class="row">
             <span>
-              居住縣市
+              選擇縣市
               <span v-if="!bypass.includes('city')">*</span>
             </span>
             <select class="select w-full rounded-none" v-model="formData.city">
-              <!-- <option value="" selected disabled>請選擇城市</option> -->
+              <!--  -->
+              <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
@@ -99,32 +100,26 @@
 
           <label class="row">
             <span>
-              居住地區
+              選擇區域
               <span v-if="!bypass.includes('area')">*</span>
             </span>
             <select class="select w-full rounded-none" v-model="formData.area">
-              <!-- <option value="" selected disabled>請選擇地區</option> -->
+              <!--  -->
+              <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
             </select>
           </label>
-
-          <label class="row">
-            <input
-              type="text"
-              placeholder="請輸入您的留言"
-              class="input w-full rounded-none"
-              :value="formData.msg"
-              @input="(event) => (formData.msg = event.target.value)"
-            />
-          </label>
         </div>
 
-        <div v-if="!isMobile" class="right">
-          <div class="row textarea w-full h-full rounded-none">
-            <Map v-if="info.address" />
-          </div>
+        <div class="right">
+          <textarea
+            :value="formData.msg"
+            @input="(event) => (formData.msg = event.target.value)"
+            class="row textarea w-full h-full rounded-none"
+            placeholder="請輸入您的留言"
+          ></textarea>
         </div>
       </div>
 
@@ -140,7 +135,7 @@
           <p class="text-[#000]">
             本人知悉並同意<label
               for="policy-modal"
-              class="modal-button cursor-pointer hover:opacity-70"
+              class="modal-button text-[#283ccb] cursor-pointer hover:opacity-70"
               >「個資告知事項聲明」</label
             >內容
           </p>
@@ -148,13 +143,13 @@
         <Policy />
 
         <!-- Recaptcha -->
-        <!-- <vue-recaptcha
+        <vue-recaptcha
           class="flex justify-center z-10 recaptcha"
           ref="recaptcha"
           :sitekey="info.recaptcha_site_key_v2"
           @verify="onRecaptchaVerify"
           @expired="onRecaptchaUnVerify"
-        /> -->
+        />
 
         <!-- Send -->
         <div class="send btn cursor-pointer" @click="send()">
@@ -162,15 +157,12 @@
         </div>
       </div>
 
-      <div v-if="isMobile" class="map_mb">
-        <Map v-if="info.address" />
-      </div>
-
       <!-- Contact Info -->
       <ContactInfo />
     </div>
 
     <!-- Map -->
+    <Map v-if="info.address" />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -184,7 +176,7 @@
   position: relative
   // padding-top: size(406)
   overflow: hidden
-  // min-height: size(500)
+  min-height: size(500)
   z-index: 50
 
   .bg-image
@@ -276,14 +268,10 @@
       > span
         display: flex
         align-items: center
-        width: 5.5em
+        width: 7.5em
         text-align: left
         padding-left:1em
         font-weight: bold
-        &.deco
-          border-right: solid 1px #000
-          width: 4.5em
-          margin-right: 2em
         > span
           color: #F00
           font-size:1em
@@ -304,32 +292,26 @@
         transition: background .3s
         &:focus
           background-position: calc(100% - .5em) 0%
-      &.textarea
-        padding: 0
 
   .flex_box
     position: relative
-    flex-direction: column
     display: flex
     justify-content: space-between
     align-items: center
     width: size($w - $gap)
     min-width: 800px
-    margin: 0 auto 80px
-    // height: 72px
+    margin: 0 auto
+    height: 72px
 
     .policy
-      width: 50%
-      display: flex
-      justify-content: center
-      margin-bottom: 20px
+      width: 30%
 
     .recaptcha
       width: 30%
       height: 100%
       transform: translateY(0)
 
-  $blue: rgba(15, 44, 244, 1)
+  $blue: #0014E6
   .send
     font-size: 20px
     letter-spacing: 0.9em
@@ -338,11 +320,11 @@
     background-color: $blue
     border: 0
     border-radius: 0em
-    width: 406px
-    height: 62px
+    width: 30%
+    height: 100%
     line-height: 1
     z-index: 10
-    font-weight: lighter
+    font-weight: 600
     position: relative
 
   .control
@@ -374,7 +356,7 @@
   width: 12vw
 @media screen and (max-width:768px)
   .order-section
-    min-height: sizem(950)
+    min-height: sizem(800)
     position: relative
     // overflow: hidden
     // padding-top: sizem(200)
@@ -423,15 +405,14 @@
         width: 100%
         gap: sizem(15)
 
+      .right
+        width: 100%
+        height: sizem(100)
+        .row
+          height: 7em
+
       &::after
         display: none
-
-    .map_mb
-      margin: 0 auto
-      width: sizem(300)
-      height: sizem(150)
-      .gmap
-        height: 100%
 
     .flex_box
       flex-direction: column
@@ -440,7 +421,6 @@
       justify-content: space-between
       align-items: center
       // margin: 0 auto
-      margin-bottom: 50px
       width: sizem(310)
       min-width: 0
       height: auto
@@ -456,15 +436,15 @@
         margin-bottom: 7vw
 
     .send
-      font-size: sizem(18)
-      width: sizem(200)
-      height: sizem(40)
+      font-size: sizem(21)
+      width: sizem(310)
+      height: sizem(72)
 
     .control
       font-size: sizem(14)
 
   // --------------
-  // .order-section
+  .order-section
 
 
 
@@ -507,7 +487,7 @@ import info from "@/info";
 
 import { cityList, renderAreaList } from "@/info/address.js";
 import { computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue";
-// import { VueRecaptcha } from "vue-recaptcha";
+import { VueRecaptcha } from "vue-recaptcha";
 
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
@@ -530,7 +510,7 @@ const formData = reactive({
   area: "",
   msg: "",
   policyChecked: false,
-  // r_verify: true,
+  r_verify: true,
 });
 
 //非必填
@@ -560,7 +540,7 @@ const formDataRef = ref([
   "居住地區", //area
   "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
-  // "機器人驗證", //r_verify
+  "機器人驗證", //r_verify
 ]);
 
 const areaList = ref([]);
@@ -573,12 +553,12 @@ watch(
   }
 );
 
-// const onRecaptchaVerify = () => {
-//   formData.r_verify = true;
-// };
-// const onRecaptchaUnVerify = () => {
-//   formData.r_verify = false;
-// };
+const onRecaptchaVerify = () => {
+  formData.r_verify = true;
+};
+const onRecaptchaUnVerify = () => {
+  formData.r_verify = false;
+};
 
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
