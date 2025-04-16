@@ -63,7 +63,7 @@ import HR from "./public/hr.vue";
   .s12 {
     height: size(1069);
     background: {
-      size: contain;
+      size: cover;
     }
   }
 }
