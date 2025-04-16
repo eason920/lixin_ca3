@@ -165,7 +165,7 @@ onMounted(() => {
   .en {
     width: sizem(75);
     top: sizem(335);
-    left: sizem(140);
+    left: sizem(80);
   }
 
   .title1 {
