@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t}from"./index.888566f8.js";const n={name:"404",components:{},methods:{}},o={class:"bg"};function c(r,_,s,d,i,g){return t(),a("div",o)}var m=e(n,[["render",c],["__scopeId","data-v-3f55f986"]]);export{m as default};
