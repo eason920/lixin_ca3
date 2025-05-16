@@ -41,7 +41,15 @@ body {
 }
 
 .home {
-  background-image: url("@/section/public/bg2.png");
+  background: #666;
+  
+// background-image: url("@/section/public/bg2.png");
+&::before{content: "";position: fixed;top: 0;left: 0;width: 100%;right: 0;bottom: 0;
+background: #000;
+background-image: url("@/section/s1/bg.jpg");
+background-size: cover;
+background-position: center;
+}
 }
 
 .fade-enter-active,

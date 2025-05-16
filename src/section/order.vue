@@ -4,8 +4,8 @@
       <!-- Title -->
       <div class="title_box">
         <img class="img_title" src="./form/title.png" />
-        <HR class="hr" :props-color="'255,255,255'" />
-        <img class="img_subtitle" src="./form/en.png" />
+     <!--    <HR class="hr" :props-color="'255,255,255'" />
+        <img class="img_subtitle" src="./form/en.png" /> -->
         <img class="img_contact" src="./form/en2.svg" />
       </div>
       <!-- <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div> -->
@@ -193,11 +193,12 @@
   padding-top: 0
   font-size: size(15)
   // background: linear-gradient(90deg, #FC4C02 0%, #FF7D00 100%)
+  /*
   background:
     image: url("./form/repeat_bg.png")
     repeat: repeat-x
     position: center top
-    color: #fd7f02
+    color: #fd7f02 */
 
   .order-title
     font-size: size(40)
@@ -311,7 +312,7 @@
       height: 100%
       transform: translateY(0)
 
-  $blue: #0014E6
+  $blue: #003296
   .send
     font-size: 20px
     letter-spacing: 0.9em
@@ -326,6 +327,8 @@
     z-index: 10
     font-weight: 600
     position: relative
+    &:hover
+     background-color: #00246b
 
   .control
     font-size: calc(12px + #{size(4)})
@@ -339,10 +342,10 @@
   align-items: center
 
 .img_title
-  width: 40vw
+  width: 62vw
   margin:
     top: 5vw
-    bottom: 2vw
+    bottom: 6vw
 
 .hr
   width: 28vw
@@ -353,7 +356,7 @@
   margin-bottom: 4vw
 
 .img_contact
-  width: 12vw
+  width: 16vw
 @media screen and (max-width:768px)
   .order-section
     min-height: sizem(800)
@@ -449,10 +452,10 @@
 
 
   .img_title
-    width: 80vw
+    width: 85vw
     margin:
       top: 15vw
-      bottom: 5vw
+      bottom: 10vw
 
   .hr
     width: 80vw
@@ -463,8 +466,8 @@
     margin-bottom: 16vw
 
   .img_contact
-    width: 30vw
-    margin-bottom: 5vw
+    width: 35vw
+    margin-bottom: 0vw
 
   .ani_bg img
     top: 0vw

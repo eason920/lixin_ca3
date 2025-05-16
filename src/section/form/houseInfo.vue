@@ -20,9 +20,9 @@
 
 .house {
   color: #FFF;
-  background-image: url(./repeat_bg_house.png);
-  background-repeat: no-repeat;
-  background-color: #fd7f02;
+  // background-image: url(./repeat_bg_house.png);
+  // background-repeat: no-repeat;
+  // background-color: #fd7f02;
   // background: linear-gradient(90deg, #FC4C02 0%, #FF7D00 100%);
 
  /* background: #FFF {

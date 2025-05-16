@@ -1,10 +1,6 @@
 <template>
   <article ref="dom" class="s1 overflow-hidden" id="s1">
-    <!--  <img src="./s1/02.jpg" class="t0"> -->
-    <!-- <div class="ani_gray"></div>  --->
-    <div class="box" data-aos="fade" data-aos-delay="0">
-      <img src="./s1/img.webp" data-aos="zoom-in" data-aos-delay="1500" />
-    </div>
+    <div class="ani_gray"></div>
 
     <img
       src="./s1/title1.png"
@@ -21,14 +17,15 @@
       data-aos-duration="2000"
     />
 
-    <!--
+    <div class="box" data-aos="fade" data-aos-delay="0">
+      <img src="./s1/img.png" data-aos="zoom-in" data-aos-delay="1500" />
+    </div>
     <img
       src="./s1/en.png"
       class="en"
       data-aos="zoom-in"
       data-aos-delay="1500"
     />
-    -->
 
     <img src="./s1/logo.png" class="logo" data-aos="zoom-in" data-aos-delay="1500" />
     <img src="./s1/slogo.png" class="slogo" data-aos="zoom-in" data-aos-delay="1500" />
@@ -66,28 +63,24 @@ onMounted(() => {
 @import "@/assets/style/public.sass";
 .s1 {
   height: 100vh;
-  min-height: calc(100vw * 900 / 1920);
-  max-height: calc(100vw * 1080 / 1920);
+  min-height: 46.875vw;
+  max-height: 56.25vw;
   position: relative;
- // background: linear-gradient(90deg, #fc4c02 0%, #ff7d00 100%);
+  background: linear-gradient(90deg, #fc4c02 0%, #ff7d00 100%);
 }
-.t0{
-  position: absolute;
-  top:  calc(50% - #{sizem(302)});opacity: .3;
-  left: 0;
-  width: 100%;}
+
 .box {
   position: absolute;
-  width: calc(100vw * 770 / 1920);
-  height: calc(100vw * 506 / 1920);
-  top: calc(50% + (100vw * (165 - (1080 * 0.5)) / 1920));
+  width: calc(100vw * 810 / 1920);
+  height: calc(100vw * 365 / 1920);
+  top: calc(50% + (100vw * (250 - (1080 * 0.5)) / 1920));
   left: 0;
- // background: #fff;
+  background: #fff;
   text-align: right;
   transform: translateX(-50%);
   img {
     height: 100%;
-    transform-origin: 50% 50%;
+    transform-origin: 100% 100%;
   }
 }
 
@@ -100,24 +93,24 @@ onMounted(() => {
 
 .title1 {
   position: absolute;
-  width: calc(100vw * 740 / 1920);
-  top: calc(50% + (100vw * (165 - (1080 * 0.5)) / 1920));
-  right: calc(100vw * 260 / 1920);
+  width: calc(100vw * 687 / 1920);
+  top: calc(50% + (100vw * (250 - (1080 * 0.5)) / 1920));
+  right: calc(100vw * 205 / 1920);
   z-index: 15;
 }
 
 .title2 {
   position: absolute;
-  width: calc(100vw * 730 / 1920);
-  top: calc(50% + (100vw * (382 - (1080 * 0.5)) / 1920));
-  right: calc(100vw * 270 / 1920);
+  width: calc(100vw * 760 / 1920);
+  top: calc(50% + (100vw * (450 - (1080 * 0.5)) / 1920));
+  right: calc(100vw * 160 / 1920);
   z-index: 15;
 }
 
 .logo {
   position: absolute;
   width: calc(100vw * 525 / 1920);
-  bottom: calc(30% + (100vw * (155 - (1080 * 0.3)) / 1920));
+  bottom: calc(20% + (100vw * (130 - (1080 * 0.2)) / 1920));
   right: 0;
   left: 0;
   margin: auto;
@@ -127,7 +120,7 @@ onMounted(() => {
 .slogo {
   position: absolute;
   width: calc(100vw * 525 / 1920);
-  bottom: calc(30% + (100vw * (97 - (1080 * 0.3)) / 1920));
+  bottom: calc(20% + (100vw * (60 - (1080 * 0.2)) / 1920));
   right: 0;
   left: 0;
   margin: auto;
@@ -151,23 +144,21 @@ onMounted(() => {
 
 @media screen and (max-width: $bp) {
   .s1 {
-    height: calc(100vh - 63px);
-    min-height: sizem(604);
-    max-height: sizem(750);
+    height: 100vh;
+    min-height: sizem(667);
+    max-height: sizem(812);
   }
 
   .box {
-    width: sizem(210);
-    height:auto;
-    top: sizem(30);
-    top:calc(50% + #{sizem(30-604*.5)});
+    width: sizem(275);
+    height: sizem(105);
+    top: sizem(290);
     right: 0;
     left: 0;
     margin: auto;
     overflow: hidden;
     img {
-      width: 100%;
-      height: auto;
+      height: 130%;
     }
   }
 
@@ -179,17 +170,15 @@ onMounted(() => {
 
   .title1 {
     width: sizem(260);
-    top: sizem(280);
-    top:calc(50% + #{sizem(280-604*.5)});
+    top: sizem(98);
     right: 0;
     left: 0;
     margin: auto;
   }
 
   .title2 {
-    width: sizem(270);
-    top: sizem(355);
-    top:calc(50% + #{sizem(355-604*.5)});
+    width: sizem(280);
+    top: sizem(172);
     right: 0;
     left: 0;
     margin: auto;
@@ -198,14 +187,12 @@ onMounted(() => {
 
   .logo {
     width: sizem(260);
-    bottom: sizem(40);
-    bottom:calc(10% + #{sizem(40-604*.1)});
+    bottom: calc(69px + 18vh);
   }
 
   .slogo {
     width: sizem(260);
-    bottom: sizem(15);
-    bottom:calc(10% + #{sizem(15-604*.1)});
+    bottom: calc(69px + 14vh);
   }
 }
 </style>

@@ -100,6 +100,7 @@ import "swiper/css/navigation";
 .s10 {
   position: relative;
   z-index: 99;
+  background-image: url("@/section/public/bg2.png");
 }
 
 .box {

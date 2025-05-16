@@ -66,10 +66,10 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-$blue: #0014E6;
+$blue: #003296;
 
-.bg-color1{background-color: #0014E6;}
-.hover\:bg-color2:hover{background-color:#000ea5;}
+.bg-color1{background-color: #003296;}
+.hover\:bg-color2:hover{background-color:#00246b;}
 
 
 .contact-info-img{
@@ -121,7 +121,7 @@ $blue: #0014E6;
       gap: 1em;
 
       &:hover {
-        background-color: #000ea5;
+        background-color: #00246b;
         /*
         color: #000;
         img {
